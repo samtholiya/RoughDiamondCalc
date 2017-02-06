@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.comp.sam.roughdiamondcalc.MainActivity">
+<RelativeLayout
+    android:id="@+id/data_layer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rough_rate_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/rough_rate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/general_padding"
+            android:text="@string/rough_rate"
+            android:textSize="@dimen/label_text" />
+
+        <EditText
+            android:id="@+id/rough_rate_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rough_rate_text"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/percentage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rough_rate_layer"
+        android:hint="@string/percentage"
+        android:padding="@dimen/general_padding"
+        android:textSize="@dimen/label_text" />
+
+    <TextView
+        android:id="@+id/percentage_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rough_rate_layer"
+        android:layout_toEndOf="@+id/polished_weight_text"
+        android:layout_toRightOf="@+id/polished_weight_text"
+        android:padding="@dimen/general_padding"
+        android:text="@string/zero_value"
+        android:textSize="@dimen/label_text" />
+
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/percentage_text_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rough_rate_layer"
+        android:layout_toEndOf="@+id/percentage_text_value"
+        android:layout_toRightOf="@+id/percentage_text_value"
+        android:padding="@dimen/general_padding" />
+
+    <TextView
+        android:id="@+id/size_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/percentage_text_value"
+        android:hint="@string/size"
+        android:padding="@dimen/general_padding"
+        android:textSize="@dimen/label_text" />
+
+    <TextView
+        android:id="@+id/size_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/percentage_text"
+        android:layout_toRightOf="@id/polished_weight_text"
+        android:padding="@dimen/general_padding"
+        android:text="@string/zero_value"
+        android:textSize="@dimen/label_text" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/size_text_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/percentage_text"
+        android:layout_toEndOf="@+id/size_text_value"
+        android:layout_toRightOf="@+id/size_text_value"
+        android:padding="@dimen/general_padding" />
+<RelativeLayout
+    android:id="@+id/labour_layer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/size_text_value"
+    android:layout_alignBottom="@+id/labour_1_value">
+    <TextView
+        android:id="@+id/labour_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/general_padding"
+        android:text="@string/labour"
+        android:textSize="@dimen/label_text"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"/>
+</RelativeLayout>
+
+    <EditText
+        android:id="@id/labour_1_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/label_text"
+        android:layout_below="@id/size_text_seek"
+        android:layout_toRightOf="@id/polished_weight_text"
+        android:layout_toEndOf="@id/polished_weight_text"/>
+
+<!--
+    <EditText
+        android:id="@+id/labour_2_value"
+        android:layout_width="@dimen/labour_value_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/size_text_seek"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/label_text"
+        android:inputType="numberDecimal"
+        android:layout_toEndOf="@id/labour_1_value"
+        android:layout_toRightOf="@id/labour_1_value"/>
+
+    <EditText
+        android:id="@+id/labour_3_value"
+        android:layout_width="@dimen/labour_value_width"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/labour_2_value"
+        android:layout_toEndOf="@id/labour_2_value"
+        android:layout_below="@id/size_text_seek"
+        android:textSize="@dimen/label_text"
+        android:inputType="numberDecimal"/>
+
+-->
+    <TextView
+        android:id="@id/polished_weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labour_1_value"
+        android:padding="@dimen/general_padding"
+        android:text="@string/polished_weight"
+        android:textSize="@dimen/label_text" />
+
+    <TextView
+        android:id="@+id/polished_weight_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labour_1_value"
+        android:layout_toEndOf="@id/polished_weight_text"
+        android:layout_toRightOf="@id/polished_weight_text"
+        android:padding="@dimen/general_padding"
+        android:text="@string/zero_value"
+        android:textSize="@dimen/label_text" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/polished_weight_text_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labour_1_value"
+        android:layout_toEndOf="@+id/polished_weight_text_value"
+        android:layout_toRightOf="@+id/polished_weight_text_value"
+        android:padding="@dimen/general_padding" />
+
+    <TextView
+        android:id="@+id/less_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/polished_weight_text_value"
+        android:padding="@dimen/general_padding"
+        android:text="@string/less"
+        android:textSize="@dimen/label_text" />
+
+    <TextView
+        android:id="@+id/less_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/polished_weight_text"
+        android:layout_toEndOf="@id/polished_weight_text"
+        android:layout_toRightOf="@id/polished_weight_text"
+        android:padding="@dimen/general_padding"
+        android:text="@string/zero_value"
+        android:textSize="@dimen/label_text" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/less_text_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/polished_weight_text"
+        android:layout_toEndOf="@+id/less_text_value"
+        android:layout_toRightOf="@+id/less_text_value"
+        android:padding="@dimen/general_padding" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/less_text"
+        android:text="@string/calculate"
+        android:layout_toLeftOf="@+id/less_text_seek"
+        android:layout_toStartOf="@+id/less_text_seek" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:padding="@dimen/general_padding"
+        android:layout_below="@+id/l1"
+        android:layout_toEndOf="@id/calculate_button"
+        android:layout_toRightOf="@id/calculate_button"/>
+<TextView
+    android:id="@id/l1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@id/calculate_button"
+    android:layout_toRightOf="@id/calculate_button"
+    android:layout_below="@id/less_text_seek"
+    android:text="Price:"
+    android:padding="@dimen/general_padding"
+    android:textSize="@dimen/label_text"/>
+    <TextView
+        android:text="@string/zero_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/l1"
+        android:layout_toEndOf="@id/l1"
+        android:layout_below="@id/less_text_seek"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/label_text"
+        android:padding="@dimen/general_padding"
+        android:id="@+id/answer0" />
+</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/data_layer"/>
+</RelativeLayout>
