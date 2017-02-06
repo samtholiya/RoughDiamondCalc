@@ -1,3 +1,3 @@
 # RoughDiamondCalc
-A project which implements Range Slider
-you can also contribute to the accuracy of the slider or report bugs in it.
+A project which implements Range Slider <br>
+You can also contribute to the accuracy of the range slider.
